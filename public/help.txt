@@ -1,2 +1,3 @@
 https://www.youtube.com/watch?v=nkGjob3q2GI
 https://react-svgr.com/playground/
+https://contentlayer.dev/
