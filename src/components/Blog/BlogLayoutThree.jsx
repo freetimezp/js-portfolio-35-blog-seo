@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { format } from 'date-fns';
 
-const BlogLayoutTwo = ({ blog }) => {
+const BlogLayoutThree = ({ blog }) => {
     return (
-        <div className='group grid grid-cols-12 gap-4 items-center text-dark'>
-            <Link href={blog.url} className='col-span-4 h-full rounded-xl overflow-hidden'>
+        <div className='group flex flex-col items-center text-dark'>
+            <Link href={blog.url} className='h-full rounded-xl overflow-hidden'>
                 <Image
                     src={blog.image.filePath.replace("../public", "")}
                     placeholder='blur'
@@ -14,12 +14,12 @@ const BlogLayoutTwo = ({ blog }) => {
                     alt={blog.title}
                     width={blog.image.width}
                     height={blog.image.height}
-                    className='aspect-square w-full h-full object-cover object-center 
+                    className='aspect-[4/3] w-full h-full object-cover object-center
                         group-hover:scale-110 transition-all duration-500 ease-in-out'
                 />
             </Link>
 
-            <div className='col-span-8 w-full'>
+            <div className='flex flex-col w-full mt-4'>
                 <span className='uppercase text-accent font-semibold text-sm'>
                     {blog.tags[0]}
                 </span>
@@ -40,4 +40,5 @@ const BlogLayoutTwo = ({ blog }) => {
     );
 };
 
-export default BlogLayoutTwo;
+export default BlogLayoutThree;
+

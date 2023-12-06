@@ -9,11 +9,11 @@ const Header = () => {
             <Logo />
 
             <nav className='w-max py-3 px-8 border border-solid border-dark rounded-full
-                font-medium capitalize flex items-center gap-2 fixed top-6 right-1/2 translate-x-1/2
-                bg-light/80 backdrop-blur-lg'>
-                <Link href="/" className=''>Home</Link>
-                <Link href="/about">About</Link>
-                <Link href="/contact">Contact</Link>
+                font-medium capitalize flex items-center gap-4 fixed top-6 right-1/2 translate-x-1/2
+                bg-light/80 backdrop-blur-lg z-50'>
+                <Link href="/" className='hover:text-accent'>Home</Link>
+                <Link href="/about" className='hover:text-accent'>About</Link>
+                <Link href="/contact" className='hover:text-accent'>Contact</Link>
                 <button>
                     <SunIcon />
                 </button>
