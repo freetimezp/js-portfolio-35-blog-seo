@@ -2,8 +2,13 @@ import Image from "next/image";
 
 import Tag from "../../../components/Elements/Tag";
 import { allBlogs } from "../../../../.contentlayer/generated/index.mjs";
+import { slug } from 'github-slugger';
 import BlogDetails from '../../../components/Blog/BlogDetails';
 import RenderMDX from '../../../components/Blog/RenderMDX';
+
+export async function generateStaticParams() {
+    return allBlogs.map((blog) => ({ slug: blog._raw.flattenedPath }));
+}
 
 export default function BlogPage({ params }) {
     const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
@@ -17,7 +22,7 @@ export default function BlogPage({ params }) {
                     absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <Tag
                         name={blog.tags[0]}
-                        link={`/categories/${blog.tags[0]}`}
+                        link={`/categories/${slug(blog.tags[0])}`}
                         className="px-6 text-sm py-2"
                     />
                     <h1 className="inline-block mt-6 font-semibold capitalize text-light
