@@ -3,3 +3,5 @@ https://react-svgr.com/playground/
 https://contentlayer.dev/
 https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes
 https://www.npmjs.com/package/remark-gfm
+https://yusuf.fyi/posts/contentlayer-table-of-contents
+
