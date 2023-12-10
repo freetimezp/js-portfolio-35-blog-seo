@@ -1,6 +1,6 @@
 import React from 'react';
-import AboutCiverSection from '../../components/About/AboutCiverSection';
-import Skills from '../../components/About/Skills';
+import AboutCiverSection from '../../../components/About/AboutCiverSection';
+import Skills from '../../../components/About/Skills';
 import Link from 'next/link';
 
 const AboutPage = () => {
