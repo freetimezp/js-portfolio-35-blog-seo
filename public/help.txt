@@ -7,3 +7,4 @@ https://yusuf.fyi/posts/contentlayer-table-of-contents
 https://nextjs.org/docs/app/api-reference/functions/generate-static-params
 https://lottiefiles.com/animations/sloth-meditate-SzNofNFhYY
 https://react-hook-form.com/
+https://supabase.com/
