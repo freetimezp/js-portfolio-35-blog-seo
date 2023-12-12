@@ -3,6 +3,11 @@ import AboutCiverSection from '../../../components/About/AboutCiverSection';
 import Skills from '../../../components/About/Skills';
 import Link from 'next/link';
 
+export const metadata = {
+    title: "About Me",
+    description: "Some info about my self",
+}
+
 const AboutPage = () => {
     return (
         <>

@@ -3,6 +3,13 @@ import React from 'react';
 import LottieAnimation from '../../../components/Contact/LottieAnimation';
 import ContactForm from '../../../components/Contact/ContactForm';
 
+import siteMetadata from '../../../utils/siteMetadata';
+
+export const metadata = {
+    title: "Contact Me",
+    description: `Contact me with the form available on this page or use email ${siteMetadata.email}`,
+}
+
 const ContactPage = () => {
     return (
         <section className='w-full h-[75vh] border-b-2 border-solid border-dark flex 
