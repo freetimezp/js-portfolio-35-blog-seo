@@ -2,6 +2,8 @@ import './globals.css';
 import { Inter, Manrope } from 'next/font/google';
 import { cx } from '../utils';
 
+import Script from 'next/script';
+
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
@@ -56,6 +58,17 @@ export default function RootLayout({ children }) {
       <body
         className={cx(inter.variable, manrope.variable, "font-mr bg-light dark:bg-dark")}
       >
+        <Script id="">
+          {
+            `if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+              document.documentElement.classList.add('dark')
+            } else {
+              document.documentElement.classList.remove('dark')
+            }`
+          }
+        </Script>
+
+
         <Header />
         {children}
         <Footer />

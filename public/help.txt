@@ -8,3 +8,4 @@ https://nextjs.org/docs/app/api-reference/functions/generate-static-params
 https://lottiefiles.com/animations/sloth-meditate-SzNofNFhYY
 https://react-hook-form.com/
 https://supabase.com/
+https://nextjs.org/docs/app/api-reference/functions/generate-metadata#twitter
