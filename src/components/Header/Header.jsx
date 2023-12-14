@@ -1,8 +1,9 @@
 "use client"
+import { cx } from '../../utils';
 import Link from 'next/link';
 import Logo from './Logo';
 
-import { LinkedinIcon, TwitterIcon, GithubIcon, DribbbleIcon, SunIcon } from '../Icons';
+import { LinkedinIcon, TwitterIcon, GithubIcon, DribbbleIcon, SunIcon, MoonIcon } from '../Icons';
 
 import siteMetadata from '../../utils/siteMetadata';
 import { useThemeSwitch } from '../Hooks/useThemeSwitch';
@@ -56,8 +57,9 @@ const Header = () => {
                 <Link href="/" className='hover:text-accent'>Home</Link>
                 <Link href="/about" className='hover:text-accent'>About</Link>
                 <Link href="/contact" className='hover:text-accent'>Contact</Link>
-                <button onClick={() => setMode(mode === 'light' ? "dark" : "light")}>
-                    <SunIcon />
+                <button onClick={() => setMode(mode === 'light' ? "dark" : "light")}
+                    className={cx("w-6 h-6 ease ml-2 flex items-center justify-center p-1 rounded-full", mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark')}>
+                    {mode === 'light' ? <MoonIcon className="fill-dark" /> : <SunIcon className="fill-light" />}
                 </button>
             </nav>
 
@@ -67,27 +69,28 @@ const Header = () => {
                 <Link href="/" className='hover:text-accent'>Home</Link>
                 <Link href="/about" className='hover:text-accent'>About</Link>
                 <Link href="/contact" className='hover:text-accent'>Contact</Link>
-                <button onClick={() => setMode(mode === 'light' ? "dark" : "light")}>
-                    <SunIcon />
+                <button onClick={() => setMode(mode === 'light' ? "dark" : "light")}
+                    className={cx("w-8 h-8 ease ml-2 flex items-center justify-center p-1 rounded-full", mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark')}>
+                    {mode === 'light' ? <MoonIcon className="fill-dark" /> : <SunIcon className="fill-light" />}
                 </button>
             </nav>
 
             <div className='hidden sm:flex items-center'>
-                <a href={siteMetadata.linkedin || "#"} className='inline-block w-6 h-6 mr-4'>
+                <a href={siteMetadata.linkedin} className='inline-block w-6 h-6 mr-4'>
                     <LinkedinIcon className="hover:scale-125 transition-all ease duration-300" />
                 </a>
-                <a href={siteMetadata.twitter || "#"} className='inline-block w-6 h-6 mr-4'>
+                <a href={siteMetadata.twitter} className='inline-block w-6 h-6 mr-4'>
                     <TwitterIcon className="hover:scale-125 transition-all ease duration-300" />
                 </a>
-                <a href={siteMetadata.github || "#"} className='inline-block w-6 h-6 mr-4'>
+                <a href={siteMetadata.github} className='inline-block w-6 h-6 mr-4'>
                     <GithubIcon className="hover:scale-125 transition-all ease duration-300 
                     dark:fill-light" />
                 </a>
-                <a href={siteMetadata.dribbble || "#"} className='inline-block w-6 h-6 mr-4'>
+                <a href={siteMetadata.dribbble} className='inline-block w-6 h-6 mr-4'>
                     <DribbbleIcon className="hover:scale-125 transition-all ease duration-300" />
                 </a>
             </div>
-        </header>
+        </header >
     );
 };
 

@@ -6,7 +6,7 @@ const siteMetadata = {
     description: 'A blog created with Next.js, Tailwind.css and contentlayer.',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'https://js-event-02-wedding.vercel.app', // your website URL
+    siteUrl: 'http://localhost:3000', // your website URL
     siteLogo: '/profile-img.png',
     socialBanner: '/screenshot.png', // add social banner in the public folder
     email: 'fromzpcity@gmail.com',

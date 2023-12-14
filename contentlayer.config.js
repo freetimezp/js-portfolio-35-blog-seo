@@ -84,6 +84,7 @@ export default makeSource({
     /* options */
     contentDirPath: 'content',
     documentTypes: [Blog],
+    disableImportAliasWarning: true,
     mdx: {
         remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings,
             { behavior: "append" }], [rehypePrettyCode, codeOptions]]

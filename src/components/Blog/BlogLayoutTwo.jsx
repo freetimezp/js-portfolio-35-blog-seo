@@ -16,6 +16,7 @@ const BlogLayoutTwo = ({ blog }) => {
                     height={blog.image.height}
                     className='aspect-square w-full h-full object-cover object-center 
                         group-hover:scale-110 transition-all duration-500 ease-in-out'
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
             </Link>
 

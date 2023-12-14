@@ -16,10 +16,10 @@ const ViewCounter = ({ slug, noCount = false, showCount = true }) => {
                 });
 
                 if (error) {
-                    console.log(error);
+                    //console.log(error);
                 }
             } catch (error) {
-                console.log("En error occurred while incrementing views: ", error);
+                //console.log("En error occurred while incrementing views: ", error);
             }
         }
 
@@ -35,12 +35,12 @@ const ViewCounter = ({ slug, noCount = false, showCount = true }) => {
                     .match({ slug: slug }).single();
 
                 if (error) {
-                    console.log(error);
+                    //console.log(error);
                 }
 
                 setViews(data ? data.count : 0);
             } catch (error) {
-                console.log(error);
+                //console.log(error);
             }
         }
 
