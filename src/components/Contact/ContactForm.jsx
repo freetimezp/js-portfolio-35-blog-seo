@@ -8,8 +8,8 @@ export default function ContactForm() {
     console.log(errors);
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className='mt-12 text-xl font-medium leading-relaxed 
-            font-in'>
+        <form onSubmit={handleSubmit(onSubmit)} className='mt-12 text-base xs:text-lg 
+            sm:text-xl font-medium leading-relaxed font-in'>
             Hello! My name is{" "}
             <input type="text" placeholder="Your name" {...register("name", { required: true })}
                 className='outline-none border-0 p-0 mx-2 focus:ring-0 placeholder:text-center 
@@ -29,8 +29,8 @@ export default function ContactForm() {
                 border-b border-gray focus:border-gray bg-transparent w-full' />
 
             <input type="submit" placeholder='Send' className='mt-8 font-medium inline-block 
-                uppercase text-xl py-3 px-8 border-2 border-solid border-dark rounded 
-                cursor-pointer' value="Send Message" />
+                uppercase text-sm sm:text-xl py-3 px-8 border-2 border-solid border-dark 
+                dark:border-light rounded cursor-pointer' value="Send Message" />
         </form >
     );
 }
